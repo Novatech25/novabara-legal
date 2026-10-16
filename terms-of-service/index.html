@@ -4,52 +4,123 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Conditions d’utilisation de NovaBara — NovaBara</title>
-<meta name="description" content="Conditions d’utilisation de NovaBara — application NovaBara, éditée par NovaTech.">
+<meta name="description" content="NovaBara est exploitée par NovaTech. Contact : modernsoftware058@gmail.com. Le service permet de rechercher des professionnels, échanger, or — application NovaBara, éditée par NovaTech.">
 <style>
-:root{color-scheme:light dark}
+:root{color-scheme:light dark;
+ --bg:#f4f7fa;--card:#ffffff;--card2:#fafbfd;--line:#e4eaf1;--txt:#17222e;--sub:#5b6b7d;
+ --acc:#0f766e;--acc2:#14b8a6;--accSoft:#e6f5f3;--accTxt:#0b5d57;
+ --shadow:0 1px 2px rgba(16,42,54,.05),0 8px 24px rgba(16,42,54,.06);
+ --ring:rgba(15,118,110,.35)}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#0b1016;--card:#131b26;--card2:#16202d;--line:#223048;--txt:#eaf0f6;--sub:#93a3b5;
+ --acc:#2dd4bf;--acc2:#5eead4;--accSoft:#123c3a;--accTxt:#5eead4;
+ --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);
+ --ring:rgba(45,212,191,.4)}}
 *{margin:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f6f8fb;color:#1c2430;line-height:1.65}
-@media(prefers-color-scheme:dark){body{background:#10151c;color:#e8edf4}}
-.wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:36px}
-.logo{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#0f766e,#115e59);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
-.brand b{font-size:20px}
-.brand small{display:block;color:#6b7686;font-weight:400}
-.card{background:#fff;border:1px solid #e3e8f0;border-radius:18px;padding:28px;box-shadow:0 2px 8px rgba(15,40,60,.05)}
-@media(prefers-color-scheme:dark){.card{background:#18212e;border-color:#26314a}}
-h1{font-size:28px;margin-bottom:6px}
-.meta{color:#6b7686;font-size:14px;margin-bottom:24px}
-h2{font-size:19px;margin:26px 0 8px;color:#0f766e}
-@media(prefers-color-scheme:dark){h2{color:#5eead4}}
-p{margin:8px 0}
-ul.rules{padding-left:22px;margin:8px 0}
-ul.rules li{margin:6px 0}
-a{color:#0f766e}
-@media(prefers-color-scheme:dark){a{color:#5eead4}}
-.nav{display:grid;gap:14px;margin-top:24px}
-.nav a{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #e3e8f0;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;font-weight:600;transition:transform .15s}
-@media(prefers-color-scheme:dark){.nav a{background:#18212e;border-color:#26314a}}
-.nav a:hover{transform:translateY(-1px)}
-.nav a span:last-child{color:#0f766e;font-size:20px}
-.lang{margin:22px 0;font-size:14px;color:#6b7686}
-.lang a{font-weight:600;text-decoration:none}
-footer{margin-top:40px;text-align:center;color:#6b7686;font-size:13px}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+ background:var(--bg);color:var(--txt);line-height:1.7;
+ background-image:radial-gradient(900px 500px at 80% -10%,rgba(20,184,166,.10),transparent 60%)}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 72px}
+
+/* ===== En-tête ===== */
+.top{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+ background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.top-in{max-width:860px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.logo{width:38px;height:38px;border-radius:11px;flex:none;
+ background:linear-gradient(135deg,#0f766e,#0b4f49);display:flex;align-items:center;justify-content:center;
+ color:#fff;font-weight:800;font-size:18px;box-shadow:0 4px 12px rgba(15,118,110,.35)}
+.brandname{font-weight:800;font-size:17px;letter-spacing:.2px;line-height:1.2}
+.brandsub{font-size:12px;color:var(--sub);line-height:1.2}
+.spacer{flex:1}
+.home,.langbtn{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;
+ font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--line);
+ background:var(--card);color:var(--txt);transition:transform .15s,border-color .15s}
+.home:hover,.langbtn:hover{transform:translateY(-1px);border-color:var(--acc)}
+.langbtn{background:var(--accSoft);color:var(--accTxt);border-color:transparent}
+
+/* ===== Hero / contenu ===== */
+.hero{padding:44px 0 26px}
+.crumb{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--acc);
+ text-decoration:none;margin-bottom:18px}
+.crumb:hover{text-decoration:underline}
+.doch{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.dicon{width:54px;height:54px;border-radius:16px;flex:none;font-size:26px;display:flex;
+ align-items:center;justify-content:center;background:var(--accSoft);box-shadow:var(--shadow)}
+h1{font-size:clamp(26px,4.6vw,34px);line-height:1.2;font-weight:800;letter-spacing:-.02em}
+.sub{color:var(--sub);font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;
+ font-size:12.5px;font-weight:600;background:var(--card);border:1px solid var(--line);color:var(--sub)}
+.pill a{color:var(--acc);text-decoration:none;font-weight:700}
+.pill a:hover{text-decoration:underline}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;
+ padding:clamp(22px,4.5vw,40px);box-shadow:var(--shadow)}
+.card h2{font-size:clamp(18px,3.2vw,21px);margin:34px 0 10px;padding-left:14px;
+ border-left:4px solid var(--acc);border-radius:2px;line-height:1.3;font-weight:700}
+.card h2:first-of-type{margin-top:0}
+.card p{margin:10px 0;font-size:15.5px}
+ul.rules{list-style:none;padding:0;margin:16px 0;display:grid;gap:10px}
+ul.rules li{position:relative;padding:14px 16px 14px 46px;background:var(--card2);
+ border:1px solid var(--line);border-radius:14px;font-size:15px}
+ul.rules li::before{content:'';position:absolute;left:16px;top:20px;width:9px;height:9px;
+ border-radius:50%;background:var(--acc2)}
+
+/* ===== Index ===== */
+.grid{display:grid;gap:16px;margin-top:26px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.dcard{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+ border-radius:18px;padding:20px;text-decoration:none;color:inherit;
+ transition:transform .18s,box-shadow .18s,border-color .18s}
+.dcard:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:var(--shadow)}
+.dcard .dicon{width:46px;height:46px;border-radius:13px;font-size:22px}
+.dcard b{display:block;font-size:16px;line-height:1.3;margin-bottom:4px}
+.dcard small{display:block;color:var(--sub);font-size:13.5px;line-height:1.5}
+.dcard .go{margin-left:auto;color:var(--acc);font-size:22px;align-self:center}
+.sep{display:flex;align-items:center;gap:12px;margin:38px 0 6px;color:var(--sub);
+ font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.sep::before,.sep::after{content:'';flex:1;height:1px;background:var(--line)}
+.lead{font-size:16px;color:var(--sub);max-width:640px}
+
+footer{margin-top:52px;padding-top:26px;border-top:1px solid var(--line);
+ display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;
+ color:var(--sub);font-size:13px}
+footer a{color:var(--acc);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+@media(max-width:640px){footer{flex-direction:column;text-align:center;gap:6px}
+ .doch{align-items:flex-start}.dicon{width:46px;height:46px;font-size:22px;border-radius:13px}}
+:focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:8px}
+@media print{body{background:#fff}.top,footer,.crumb{display:none}.card{border:none;box-shadow:none}}
 </style>
 </head>
-<body><div class="wrap">
-<div class="brand"><div class="logo">N</div><div><b>NovaBara</b><small>NovaTech</small></div></div>
-<div class="card">
-<h1>Conditions d’utilisation de NovaBara</h1>
-<div class="meta">Version 2026-10-16 · NovaTech · <a href="mailto:modernsoftware058@gmail.com">modernsoftware058@gmail.com</a></div>
-<div class="lang"><a href="../en/terms-of-service/">English version</a></div>
-<h2>Service et exploitant</h2><p>NovaBara est exploitée par NovaTech. Contact : modernsoftware058@gmail.com. Le service permet de rechercher des professionnels, échanger, organiser des rendez-vous, consulter ou publier des offres d’emploi et des véhicules selon votre rôle. NovaTech ne réalise pas les prestations physiques et ne garantit pas les qualifications, annonces ou disponibilités déclarées par les utilisateurs.</p>
+<body>
+<header class="top"><div class="top-in">
+<div class="logo">N</div>
+<div><div class="brandname">NovaBara</div><div class="brandsub">NovaTech</div></div>
+<div class="spacer"></div>
+
+<a class="langbtn" href="../en/terms-of-service/">🌐 EN</a>
+</div></header>
+<main class="wrap"><section class="hero">
+<a class="crumb" href="../">← Tous les documents</a>
+<div class="doch"><div class="dicon">📄</div><div>
+<h1>Conditions d’utilisation de NovaBara</h1><div class="sub">Document officiel</div>
+</div></div><div class="meta">
+<span class="pill">📅 Version 2026-10-16</span>
+<span class="pill">🏢 NovaTech</span>
+<span class="pill">✉️ <a href="mailto:modernsoftware058@gmail.com">modernsoftware058@gmail.com</a></span>
+</div></section>
+<article class="card"><h2>Service et exploitant</h2><p>NovaBara est exploitée par NovaTech. Contact : modernsoftware058@gmail.com. Le service permet de rechercher des professionnels, échanger, organiser des rendez-vous, consulter ou publier des offres d’emploi et des véhicules selon votre rôle. NovaTech ne réalise pas les prestations physiques et ne garantit pas les qualifications, annonces ou disponibilités déclarées par les utilisateurs.</p>
 <h2>Compte et utilisation</h2><p>Vous devez fournir des informations exactes, protéger vos identifiants et disposer de la capacité légale nécessaire pour les engagements pris. Chaque professionnel reste responsable de ses autorisations, qualifications et obligations locales. N’usurpez pas une identité et n’utilisez pas le service pour une activité illégale. Le service n’est pas conçu pour des enfants. La charte communautaire fait partie de ces conditions et doit être acceptée avant de contribuer.</p>
 <h2>Contenus et modération</h2><p>Les contenus haineux, menaces, harcèlement, exploitation sexuelle, nudité explicite, escroqueries, annonces illégales et divulgation de données privées sont interdits. Vous gardez vos droits sur vos contenus et autorisez leur hébergement et affichage nécessaires au fonctionnement du service. Les photos et profils sont examinés avant publication ; les annonces sont soumises aux contrôles de modération. Vous pouvez signaler un contenu, un profil, un avis ou un message et bloquer un utilisateur. NovaTech peut retirer un contenu ou suspendre un compte en cas d’abus. Pour contester une décision ou signaler une urgence de modération : modernsoftware058@gmail.com.</p>
 <h2>Prestations et transactions physiques</h2><p>Le prix, les modalités, les assurances et les garanties d’une prestation, d’un emploi ou d’un véhicule doivent être convenus avec l’autre partie. Les paiements physiques ne sont pas encaissés dans NovaBara. Vérifiez l’identité, l’objet et les conditions de toute transaction avant de vous engager ; ne communiquez pas vos codes de paiement.</p>
 <h2>Accès professionnels numériques</h2><p>Lorsqu’une offre est disponible sur votre appareil et pour votre rôle, l’écran d’achat indique le prix local, la durée et les avantages transmis par le store avant confirmation. Les achats numériques et abonnements intégrés sont traités par Apple App Store ou Google Play. Un abonnement se renouvelle selon les conditions affichées par le store, sauf annulation dans les réglages du store. La restauration et la gestion des achats sont accessibles dans Réglages &gt; Abonnement. Les demandes de remboursement suivent les procédures du store concerné. Aucun paiement WhatsApp ou mobile money n’est demandé pour débloquer les fonctions numériques de l’application.</p>
 <h2>Suppression et fin de service</h2><p>Vous pouvez supprimer immédiatement votre compte dans les réglages. La suppression entraîne le retrait des données actives et le traitement des purges décrit dans la politique de confidentialité. Elle ne résilie pas un abonnement dans le store : ouvrez sa gestion pour l’annuler. Vous pouvez supprimer le compte sans attendre la fin d’un abonnement. Les contenus déjà copiés par un destinataire hors du service restent sous son contrôle.</p>
 <h2>Responsabilités et recours</h2><p>NovaTech s’efforce de maintenir le service et d’examiner les signalements. Des interruptions peuvent survenir. Chaque partie répond de ses propres actes ; aucune disposition ne limite les droits impératifs ou les protections légales des utilisateurs. En cas de difficulté, contactez modernsoftware058@gmail.com pour rechercher une solution. Les recours auprès des autorités compétentes dans votre pays restent possibles.</p>
-<h2>Évolution des conditions</h2><p>La version applicable et sa date sont indiquées. Une modification substantielle sera signalée dans le service ; une nouvelle acceptation de la charte pourra être requise. La politique de confidentialité décrit l’usage des données.</p>
-</div>
-<footer>© 2026 NovaTech — NovaBara</footer>
-</div></body></html>
+<h2>Évolution des conditions</h2><p>La version applicable et sa date sont indiquées. Une modification substantielle sera signalée dans le service ; une nouvelle acceptation de la charte pourra être requise. La politique de confidentialité décrit l’usage des données.</p></article>
+<footer>
+<span>© 2026 NovaTech — NovaBara · v2026-10-16</span>
+<span><a href="mailto:modernsoftware058@gmail.com">modernsoftware058@gmail.com</a></span>
+</footer></main>
+</body></html>
